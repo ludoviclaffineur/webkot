@@ -1,0 +1,449 @@
+body {
+  background: #dfdfdf url("bg.png") repeat-x center 50px;
+  font-size: 0.7em;
+  font-family: "Lucida Grande", arial, sans-serif;
+	margin:0 0 0 0;
+}
+
+#top-bar {
+  background: #263c52 ;
+  color: #ffffff;
+}
+
+.wrap {
+  width: 980px;
+  margin: 0 auto;
+}
+
+#menu ul {
+  margin: 0;
+  padding: 20px 0;
+}
+
+#menu ul li {
+  display: inline-block;
+	font-weight: bold;
+}
+
+#menu ul li + li {
+  margin: 0 0 0 20px;
+}
+
+#menu ul li a {
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+#content {
+  margin: 0 auto 20px;
+  width: 940px;
+  padding: 20px;
+  background: #fff;
+  -moz-box-shadow: 0 1px 2px #ccc;
+  box-shadow: 0 1px 2px #ccc;
+  color: #111111;
+  min-height: 436px;
+}
+
+header .wrap {
+  position: relative;
+	top: 0px;
+}
+
+header .logo {
+  display: inline-block;
+  font-size: 3em;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,.5);
+  margin: 10px 10px 10px 0;
+  position: relative;
+	height : 100px;
+}
+
+header .logo a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header .logo em {
+  position: absolute;
+  font-size: 0.5em;
+  right: 1.2px;
+  bottom: -4px;
+}
+
+header .tagline {
+  display: inline-block;
+  font-style: italic;
+  	font-size: 1.2em;
+  color: #fff;
+}
+
+header #flash {
+  position: absolute;
+  right: 0;
+  top: 15px;
+}
+
+header #flash .message {
+  background: #fff;
+  font-weight: bold;
+  padding: 10px 10px 10px 36px;
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+header #flash .alert {
+  color: #7f0c2c;
+  background: #fff url("error.png") no-repeat 10px center;
+}
+
+header #flash .notice {
+  color: #9fbd5a;
+  background: #fff url("tick.png") no-repeat 10px center;
+}
+
+
+#sign-in {
+  padding: 20px 0;
+}
+
+#sign-in a {
+  color: #fff;
+}
+
+#sign-in .field_with_errors {
+  display: inline-block;
+}
+
+#sign-in .fields, #sign-in .form-actions {
+  display: inline;
+}
+
+#sign-in .wrap{
+	position: relative;
+}
+
+
+#sign-in .fields input {
+  border: none;
+  padding: 5px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin: 0 5px 0 0;
+}
+
+#sign-in .fields label {
+  font-weight: bold;
+}
+
+#sign-in .form-actions .button input {
+  display: inline-block;
+  margin: 0 5px;
+  background: url("sign-in-button-bg.png") repeat-x center center;
+  border: none;
+  color: #fff;
+  padding: 4px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0 1px 2px #222;
+  box-shadow: 0 1px 2px #222;
+}
+
+
+#profile-wrap {
+  width: 200px;
+  position: absolute;
+
+  #profile-box {
+    h2 {
+      margin: 10px 0;
+    }
+
+    strong p a {
+	    color: #1b8e8a;
+    }
+  }
+
+  #profile-info ul {
+    margin: 10px 0 0 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      margin: 0 0 10px;
+
+      .label {
+        font-weight: bold;
+        display: inline-block;
+        width: 55px;
+			}
+
+			strong a {
+				color: #1b8e8a;
+      }
+    }
+  }
+}
+
+
+#stream {
+  position: relative;
+
+  #stream-wrap {
+    min-height: 377px;
+    margin: 0 0 0 220px;
+  }
+
+  #start-project .action-call {
+    text-align: center;
+
+    .button {
+      position: relative;
+      display: inline-block;
+      background: url("immo-search-bg.png") repeat-x center bottom;
+      border: 1px solid #ddd;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+      padding: 6px 30px;
+      text-decoration: none;
+
+      span {
+        background: url("project.png") no-repeat center left;
+        display: inline-block;
+        line-height: 16px;
+        padding: 0 0 0 23px;
+        color: #00698c;
+        font-weight: bold;
+        text-decoration: none;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, .85);
+      }
+    }
+  }
+}
+
+
+
+#profile-info .fields input {
+  padding: 5px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin: 0 5px 0 0;
+}
+
+th {
+	padding: 5px;
+	font-weight: bold;
+  text-align:left;
+}
+
+
+#edit-profile {
+  position: relative;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      margin: 0 0 15px;
+
+      .label {
+        display: block;
+        font-weight: bold;
+        margin: 0 0 7px;
+        color: #aaa;
+      }
+    }
+  }
+
+  form {
+    #main-content {
+      margin: 0 0 0 220px;
+
+      h2 {
+        margin: 0 0 20px;
+      }
+    }
+	}
+}
+
+#content form .fields {
+  margin: 0;
+  padding: 0;
+}
+
+#content form .fields li {
+  margin: 0 0 10px 0;
+  height: 41px;
+}
+
+#content form .fields li.checkbox {
+  line-height: 41px;
+}
+
+#content form .fields li.text {
+  height: auto;
+}
+
+#content form .fields li.text textarea {
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: inset 0 1px 2px #b0b0b0;
+  box-shadow: inset 0 1px 2px #b0b0b0;
+  border: none;
+  width: 480px;
+  padding: 5px;
+}
+
+#content form .fields li label {
+  font-weight: bold;
+  color: #aaa;
+}
+
+#content form .fields .string label, #content form .fields .text label {
+  display: block;
+  margin: 0 0 5px 0;
+}
+
+#content form .fields .string strong label {
+  color: #1b8e8a ;
+}
+
+#content form .fields .string input {
+  color: #555;
+  border: none;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: inset 0 1px 2px #b0b0b0;
+  box-shadow: inset 0 1px 2px #b0b0b0;
+  padding: 5px;
+  width: 190px;
+}
+
+#content form .form-actions {
+  text-align: right;
+	padding: 5px;
+}
+
+#content form .form-actions .button {
+  display: inline-block;
+  background: url("back-button-bg.png") repeat-x center top;
+  padding: 4px;
+  -moz-box-shadow: inset 0 1px 2px #ccc;
+  box-shadow: inset 0 1px 2px #ccc;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+#content form .form-actions .button input {
+  padding: 6px 40px;
+  font-weight: bold;
+  color: #777;
+  border: none;
+  text-shadow: 0 1px 0 #fff;
+  background: #fff url("button-bg.png") repeat-x center bottom;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0 1px 2px #ccc;
+  box-shadow: 0 1px 2px #ccc;
+}
+
+#content form .form-actions .button input:active {
+  -moz-box-shadow: 0 0 2px #ccc;
+  box-shadow: 0 0 2px #ccc;
+}
+
+#content form .form-actions .green-button {
+	display: inline-block;
+  bottom: 15px;
+  right: -280px;
+}
+
+#content form .form-actions .green-button input{
+  border: none;
+  background: url("button-b-bg.png") repeat-x center center;
+  color: #fff;
+  padding: 6px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0 1px 2px #ddd;
+  box-shadow: 0 1px 2px #ddd;
+}
+
+
+#content form .picture li input {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 190px;
+}
+
+#show-profile {
+  position: relative;
+  min-height: 260px;
+
+  #profile-box {
+    width: 200px;
+    position: absolute;
+
+    .picture .edit {
+      display: block;
+      background: #fff url("file.png") no-repeat 5px center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-transform: uppercase;
+      padding: 5px 5px 5px 25px;
+      color: #1e5270;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .profile-actions {
+      margin: 5px 0 0;
+      padding: 0;
+
+      li {
+        margin: 0 0 10px;
+        list-style: none;
+
+        a {
+          color: #1B8E8A;
+        }
+      }
+    }
+  }
+}
+
+
+#show-profile #profile-info h2 {
+  margin: 0 0 20px 0;
+}
+
+#show-profile #profile-info ul {
+  margin: 0;
+  padding: 0;
+}
+
+#show-profile #profile-info ul li {
+  list-style: none;
+  margin: 0 0 20px;
+}
+
+#show-profile #profile-info ul li .label {
+  display: block;
+  font-weight: bold;
+  margin: 0 0 10px;
+  color: #aaa;
+}

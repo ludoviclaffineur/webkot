@@ -1,0 +1,26 @@
+<section id="profile-wrap">
+  <div id="profile-box">
+    <h2><%= user.nickname %></h2>
+  </div>
+	 <div class="picture">
+      <%= image_tag user.avatar.url(:medium) %>
+    </div>
+	<TABLE>
+	  <TR>
+	 <TH> Name</TH>
+	 <TD> <%= user.name %></TD>
+	  </TR>
+	  <TR>
+	 <TH> Kot</TH>
+	 <TD> <%= user.kot %></TD>
+	  </TR>
+	  <TR>
+	 <TH> Birthday</TH>
+	 <TD> <%= user.birthday %></TD>
+	  </TR>
+	  <TR>
+	 <TH> Studies</TH>
+	 <TD> <%= user.studies %></TD>
+	  </TR>
+	</TABLE>
+</section>

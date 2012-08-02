@@ -1,0 +1,18 @@
+<section id="profile-wrap">
+  <div id="profile-box">
+    <h3>Log you in!</h3>
+  </div>
+  <div id="profile-info">
+ 		<%= form_for("user", :url => user_session_path) do |f| %>
+    	<div class="fields">
+			<ul>
+      	<li><%= f.email_field :email, :placeholder => 'exemple@mail.com' %></li>
+      	<li><%= f.password_field :password, :placeholder => 'password' %></li>
+      	<li><%= f.check_box :remember_me %>	<%= f.label :remember_me %></li>
+			</ul>
+    	</div>
+
+		  <div><%= f.submit "Log in" %></div>
+		<% end %>
+  </div>
+</section>

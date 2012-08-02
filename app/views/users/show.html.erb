@@ -1,0 +1,27 @@
+<section id="show-profile">
+<div id="profile-info">
+   <h2><%= @user.nickname  %></h2>
+   <ul>
+		<li>
+       <span class="label">Name:</span>
+       <%= @user.name %>
+     </li>
+     <li>
+       <span class="label"><%= t("profile.email") %></span>
+       <%= @user.email %>
+     </li>
+     <li>
+       <span class="label">Kot: </span>
+       <%= @user.kot %>
+     </li>
+		<li>
+       <span class="label">Studies:</span>
+       <%= @user.studies %>
+     </li>
+		<li>
+       <span class="label">Studies:</span>
+       <%= @user.studies %>
+     </li>
+   </ul>
+ </div>
+</section>
