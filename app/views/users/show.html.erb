@@ -1,11 +1,13 @@
 <section id="show-profile">
 <div id="profile-info">
-   <h2><%= @user.nickname  %></h2>
+	<% if current_user == @user %>
+	<div id="edit-button">
+	 <%= link_to 'edit' , edit_user_path(current_user)%>
+	</div>
+	<% end %>
+   <h2><%= @user.name %> - (<%= @user.nickname  %>)</h2>
+		 <%= image_tag @user.avatar.url(:medium) %>
    <ul>
-		<li>
-       <span class="label">Name:</span>
-       <%= @user.name %>
-     </li>
      <li>
        <span class="label"><%= t("profile.email") %></span>
        <%= @user.email %>
@@ -13,10 +15,6 @@
      <li>
        <span class="label">Kot: </span>
        <%= @user.kot %>
-     </li>
-		<li>
-       <span class="label">Studies:</span>
-       <%= @user.studies %>
      </li>
 		<li>
        <span class="label">Studies:</span>

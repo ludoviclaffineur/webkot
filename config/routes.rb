@@ -1,10 +1,22 @@
 Webkot::Application.routes.draw do
 
 
-  resources :posts
+
+
+  resources :episodes do
+    resources :comments
+  end
+  resource :search
+  resources :posts do
+    resources :comments
+  end
+
+  resources :films do
+    resources :comments
+  end
 
   devise_for :users, :controllers => { :registrations => "registrations", :sessions => "sessions", :confirmations => "confirmations"}
-
+  resources :series
   resources :users
 
   # The priority is based upon order of creation:

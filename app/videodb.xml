@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<videodb>
+    <version>1</version>
+    <movie>
+        <title>Shoot &apos;Em Up</title>
+        <originaltitle>Shoot &apos;Em Up</originaltitle>
+        <rating>7.500000</rating>
+        <epbookmark>0.000000</epbookmark>
+        <year>2007</year>
+        <top250>0</top250>
+        <votes>16</votes>
+        <outline></outline>
+        <plot>A man named Mr. Smith delivers a woman&apos;s baby during a shootout, and is then called upon to protect the newborn from the army of gunmen.</plot>
+        <tagline></tagline>
+        <runtime>86</runtime>
+        <thumb preview="http://cf2.imgobject.com/t/p/w500/44SYjI4rV7tjYhRPzMRUj5UjDYJ.jpg">http://cf2.imgobject.com/t/p/original/44SYjI4rV7tjYhRPzMRUj5UjDYJ.jpg</thumb>
+        <thumb preview="http://cf2.imgobject.com/t/p/w500/ptU3M4NhbO1PL4q10xXUPS8YrFc.jpg">http://cf2.imgobject.com/t/p/original/ptU3M4NhbO1PL4q10xXUPS8YrFc.jpg</thumb>
+        <thumb preview="http://cf2.imgobject.com/t/p/w500/avAghXMTPk2xLeUdm6GXimjjz9s.jpg">http://cf2.imgobject.com/t/p/original/avAghXMTPk2xLeUdm6GXimjjz9s.jpg</thumb>
+        <thumb preview="http://cf2.imgobject.com/t/p/w500/1V4QnLAiyk5nL5oRlOCjPdjIi0f.jpg">http://cf2.imgobject.com/t/p/original/1V4QnLAiyk5nL5oRlOCjPdjIi0f.jpg</thumb>
+        <thumb preview="http://cf2.imgobject.com/t/p/w500/h78WwtsKOQhlgjnfnBbhWU4OFfv.jpg">http://cf2.imgobject.com/t/p/original/h78WwtsKOQhlgjnfnBbhWU4OFfv.jpg</thumb>
+        <thumb preview="http://cf2.imgobject.com/t/p/w500/zcJCqdmeZ6HVFkbZooanyBAr56Y.jpg">http://cf2.imgobject.com/t/p/original/zcJCqdmeZ6HVFkbZooanyBAr56Y.jpg</thumb>
+        <thumb preview="http://cf2.imgobject.com/t/p/w500/xwGWFbNzf9wqhTUo55Nhr5vKprs.jpg">http://cf2.imgobject.com/t/p/original/xwGWFbNzf9wqhTUo55Nhr5vKprs.jpg</thumb>
+        <thumb preview="http://cf2.imgobject.com/t/p/w500/pdreXenb0tQ8OYBBEFHLy5JMxL3.jpg">http://cf2.imgobject.com/t/p/original/pdreXenb0tQ8OYBBEFHLy5JMxL3.jpg</thumb>
+        <thumb preview="http://cf2.imgobject.com/t/p/w500/iV2PT1TGBimsfwpCBMlHE6uc0eu.jpg">http://cf2.imgobject.com/t/p/original/iV2PT1TGBimsfwpCBMlHE6uc0eu.jpg</thumb>
+        <thumb preview="http://cf2.imgobject.com/t/p/w500/1tTNjYFTMmeqFWWhGPgPYLWhATj.jpg">http://cf2.imgobject.com/t/p/original/1tTNjYFTMmeqFWWhGPgPYLWhATj.jpg</thumb>
+        <thumb preview="http://cf2.imgobject.com/t/p/w500/89fsyiwFUbwFfPTXgLavlQUPPXt.jpg">http://cf2.imgobject.com/t/p/original/89fsyiwFUbwFfPTXgLavlQUPPXt.jpg</thumb>
+        <thumb preview="http://cf2.imgobject.com/t/p/w500/mK98JBXYmwaRBYEr0VR2Im3hSCD.jpg">http://cf2.imgobject.com/t/p/original/mK98JBXYmwaRBYEr0VR2Im3hSCD.jpg</thumb>
+        <fanart>
+            <thumb preview="http://cf2.imgobject.com/t/p/w780/6bqvfvhXuWMfDEaTGsK19HNGsy1.jpg">http://cf2.imgobject.com/t/p/original/6bqvfvhXuWMfDEaTGsK19HNGsy1.jpg</thumb>
+            <thumb preview="http://cf2.imgobject.com/t/p/w780/2lBNF7NjSfOmbGCiCTLoSoTINZz.jpg">http://cf2.imgobject.com/t/p/original/2lBNF7NjSfOmbGCiCTLoSoTINZz.jpg</thumb>
+            <thumb preview="http://cf2.imgobject.com/t/p/w780/gE9g6JHr2m2mfZGZqtIqCVpDl7u.jpg">http://cf2.imgobject.com/t/p/original/gE9g6JHr2m2mfZGZqtIqCVpDl7u.jpg</thumb>
+            <thumb preview="http://cf2.imgobject.com/t/p/w780/84bHlaX0mu0BpkXpbfnMRTzwr7T.jpg">http://cf2.imgobject.com/t/p/original/84bHlaX0mu0BpkXpbfnMRTzwr7T.jpg</thumb>
+            <thumb preview="http://cf2.imgobject.com/t/p/w780/xF0isRLHCN71FdreLF3jYMcpIsP.jpg">http://cf2.imgobject.com/t/p/original/xF0isRLHCN71FdreLF3jYMcpIsP.jpg</thumb>
+            <thumb preview="http://cf2.imgobject.com/t/p/w780/3HqqmAVAidli7QSvXWaq00OWCse.jpg">http://cf2.imgobject.com/t/p/original/3HqqmAVAidli7QSvXWaq00OWCse.jpg</thumb>
+        </fanart>
+        <mpaa>Rated R</mpaa>
+        <playcount>0</playcount>
+        <lastplayed></lastplayed>
+        <file></file>
+        <path>smb://172.16.1.100/films/SHOOT EM UP/VIDEO_TS/</path>
+        <filenameandpath>smb://172.16.1.100/films/SHOOT EM UP/VIDEO_TS/VIDEO_TS.IFO</filenameandpath>
+        <basepath>smb://172.16.1.100/films/SHOOT EM UP/</basepath>
+        <id>tt0465602</id>
+        <genre>Action</genre>
+        <genre>Adventure</genre>
+        <genre>Thriller</genre>
+        <country>United States of America</country>
+        <credits>Michael Davis</credits>
+        <director>Michael Davis</director>
+        <premiered></premiered>
+        <status></status>
+        <code></code>
+        <aired></aired>
+        <studio>New Line Cinema</studio>
+        <trailer>plugin://plugin.video.youtube/?action=play_video&amp;videoid=PQx24---sfw</trailer>
+        <actor>
+            <name>Clive Owen</name>
+            <role>Smith</role>
+            <thumb></thumb>
+        </actor>
+        <actor>
+            <name>Monica Bellucci</name>
+            <role>Donna Quintano</role>
+            <thumb></thumb>
+        </actor>
+        <actor>
+            <name>Paul Giamatti</name>
+            <role>Hertz</role>
+            <thumb></thumb>
+        </actor>
+        <actor>
+            <name>Stephen McHattie</name>
+            <role>Hammerson</role>
+            <thumb></thumb>
+        </actor>
+        <actor>
+            <name>Greg Bryk</name>
+            <role>Lone Man</role>
+            <thumb></thumb>
+        </actor>
+        <actor>
+            <name>Daniel Pilon</name>
+            <role>Senator Rutledge</role>
+            <thumb></thumb>
+        </actor>
+        <resume>
+            <position>0.000000</position>
+            <total>0.000000</total>
+        </resume>
+    </movie>
+</videodb>

@@ -1,15 +1,12 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Title:</b>
+<H2>
   <%= @post.title %>
-</p>
+</H2>
 
 <p>
-  <b>Content:</b>
-  <%= @post.content %>
+  <%= simple_format(@post.content) %>
 </p>
 
+<%= render :partial => "_shared/comments" %>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>

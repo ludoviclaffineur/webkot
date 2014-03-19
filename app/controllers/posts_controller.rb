@@ -1,12 +1,15 @@
 class PostsController < ApplicationController
+  before_filter :load_commentable, :only => [:show]
   # GET /posts
   # GET /posts.json
-
+  before_filter :update_action
   before_filter :authenticate_user!, :except => [:index, :show]
-
   def index
     @posts = Post.all
-
+    @latest_film = Film.last
+    @latest_comments = Comment.all[0..5]
+    @users = User.all
+    @latest_episodes = Episode.order_by('created_at DESC')[0..5]
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
@@ -17,7 +20,8 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
-
+    @comments = @post.comments
+    @comment =  @commentable.comments.new
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @post }
@@ -81,6 +85,17 @@ class PostsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to posts_url }
       format.json { head :no_content }
+    end
+  end
+
+  private
+
+  def load_commentable
+    @commentable = CommentableHandler.load_commentable(request)
+  end
+  def update_action
+    unless current_user.nil?
+      current_user.update_action
     end
   end
 end

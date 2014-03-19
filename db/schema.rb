@@ -11,7 +11,40 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120802182220) do
+ActiveRecord::Schema.define(:version => 20121019182724) do
+
+  create_table "comments", :force => true do |t|
+    t.text     "content"
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
+    t.integer  "commenter_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  create_table "episodes", :force => true do |t|
+    t.string   "title"
+    t.integer  "season_number"
+    t.integer  "episode_number"
+    t.string   "path_tvshow"
+    t.datetime "aired"
+    t.string   "thumb_url"
+    t.integer  "user_id"
+    t.integer  "serie_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  create_table "films", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "title"
+    t.string   "picture_url"
+    t.string   "trailer_url"
+    t.text     "summary"
+    t.string   "path_movie"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "posts", :force => true do |t|
     t.integer  "author_id",  :null => false
@@ -19,6 +52,14 @@ ActiveRecord::Schema.define(:version => 20120802182220) do
     t.text     "content",    :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "series", :force => true do |t|
+    t.string   "title"
+    t.text     "summary"
+    t.string   "picture_url"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "users", :force => true do |t|
@@ -43,6 +84,7 @@ ActiveRecord::Schema.define(:version => 20120802182220) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.datetime "last_action"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

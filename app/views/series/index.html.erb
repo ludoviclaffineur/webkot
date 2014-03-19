@@ -1,0 +1,29 @@
+<section id='films-index'>
+	<div class='action-call'>
+		<%= link_to content_tag(:span, 'Add a new TV show'), new_series_path, :class => "button"%>
+	</div>
+
+<h2><%= link_to 'TV Shows available', 'films?order=recent' %></h2>
+<TABLE>
+	<TR>
+		<% @series.each_with_index do |serie, index| %>
+		<TD>
+			<div style="width: 130px; height: 175px; overflow: hidden">
+			  <%= link_to(image_tag(serie.picture_url , :height => '125'), serie) %>
+			<p><%= link_to serie.title, serie %></p>
+			</div>
+
+		</TD>
+		<% if (index+1)%5 == 0 %>
+			</TR>
+			<TR>
+		<% end %>
+		<% end %>
+  </TR>
+</TABLE>
+
+	<% if @page>1 %>
+		<%= link_to 'previous page', 'series?page=' + (@page-1).to_s%>
+	<%end%>
+	<%= link_to 'next page', 'series?page=' + (@page+1).to_s %>
+</section>

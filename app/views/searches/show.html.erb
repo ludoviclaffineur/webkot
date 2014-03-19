@@ -1,0 +1,26 @@
+<section id='films-index'>
+<div id='search-form'>
+	<%= form_tag("/search", :method => "GET") do %>
+  	<%= text_field_tag(:title,nil, :placeholder => 'search') %>
+	<%end%>
+</div>
+
+<h2>Results</h2>
+<TABLE>
+	<TR>
+		<% @films.each_with_index do |film, index| %>
+			<TD>
+				<div style="width: 130px; height: 175px; overflow: hidden">
+		  		<%= link_to(image_tag(film.picture_url , :height => '125'), film) %>
+					<p><%= link_to film.title, film %></p>
+				</div>
+
+			</TD>
+				<% if (index+1)%5 == 0 %>
+			</TR>
+			<TR>
+				<% end %>
+		<% end %>
+</TR>
+</TABLE>
+</section>

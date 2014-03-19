@@ -1,0 +1,26 @@
+<h2><%= @serie.title %></h2>
+<div id="edit-button">
+ <%= link_to 'edit' , edit_series_path(@serie)%> <%= link_to 'delete', @serie, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
+<%= image_tag @serie.picture_url, :width => '725'%>
+
+<h3>Summary</h3>
+<p><%= @serie.summary %><p>
+<h3>Episodes</h3>
+
+<div class='action-call'>
+		<%= link_to content_tag(:span, 'Add a new episode'), '/episodes/new/?serieid=' + @serie.id.to_s, :class => "button"%>
+	</div>
+<% unless @episodes.first.nil? %>
+<h4>Season <%= @episodes.first.season_number %></h4>
+<%@episodes.each_with_index do |episode, index| %>
+	<% if index > 1 && @episodes[index-1].season_number != episode.season_number %>
+		<h4>Season <%= episode.season_number %></h4>
+	<%end%>
+	<div class="links">
+		<p><%= link_to episode.season_number.to_s + "x" + episode.episode_number.to_s + " " + (episode.title.nil? ? "" : episode.title ), episode %></p>
+		
+	</div>
+<% end %>
+<% end %>
+

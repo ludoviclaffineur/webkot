@@ -1,0 +1,8 @@
+<section id="latest-comments-wrap">
+  <div id="latest-comments-box">
+    <h2>Latest comments</h2>
+		<% comments.each do |comment| %>
+			<p><%= link_to comment.commenter.nickname, comment.commenter %> commented <%= link_to comment.commentable.title, comment.commentable %></p>
+		<% end%>
+	</div>
+</section>

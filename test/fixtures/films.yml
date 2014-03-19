@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  references: 
+  title: MyString
+  picture_url: MyString
+  trailer_url: MyString
+
+two:
+  references: 
+  title: MyString
+  picture_url: MyString
+  trailer_url: MyString

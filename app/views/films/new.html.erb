@@ -1,0 +1,44 @@
+<%= form_for(@film) do |f| %>
+  <% if @film.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@film.errors.count, "error") %> prohibited this film from being saved:</h2>
+
+      <ul>
+      <% @film.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+	<% if @filename.nil? %>
+	<h2>Select your file in the download folder on the server </h2>
+	<p>If you want to upload a local movie, please upload it into the download folder on ServeurKot</p>
+	<% Dir.foreach("/data/download/" + @path) do |x| %>
+		<p>
+			<% if File.directory?('/data/download/'+x)%>
+			  <%= image_tag('folder.png')%>	<%= link_to x, 'new?path=' + @path + x +'/' %>
+			<% else %>
+				<%= link_to x, 'new?path=' + @path + '/&filename=' + x %>
+			<% end %>
+		</p>
+	<%end%>
+
+	<% else%>
+
+  <ul class="fields">
+    <li class="string">
+			<%= f.label 'Insert the title', :title %>
+    	<%= f.text_field :title %>
+		</li>
+		<%= f.hidden_field :path_movie, :value => (@path + @filename) %>
+		<%= f.hidden_field :filename, :value => (@filename) %>
+		<%= @filename %>
+		<%= @path %>
+</ul>
+
+
+<div class="form-actions clear">
+     <span class="button"><%= f.submit 'Insert into the database' %></span>
+  </div>
+<% end %>
+<%end%>

@@ -1,0 +1,15 @@
+
+<h2><%= @film.title %> <small> added by <%= link_to @user.nickname, @user %> </small></h2>
+<div id="edit-button">
+ <%= link_to 'edit' , edit_film_path(@film)%> <%= link_to 'delete', @film, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
+<%= image_tag @film.picture_url, :width => '210'%>
+<%unless @film.trailer_url.blank?%>
+	<iframe width="490" height="315" src="<%=@src%>" frameborder="0" showinfo="0" autohide="1" allowfullscreen></iframe>
+<%end%>
+<h3>Summary</h3>
+<p><%= @film.summary %><p>
+<h3>Download links</h3>
+<p><a href="ftp://kokoteur:vleurgat@192.168.0.100/<%= @film.path_movie %>">Link to the movie</a></p>
+
+<%= render :partial => "_shared/comments" %>

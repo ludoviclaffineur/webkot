@@ -1,0 +1,7 @@
+<h2><%=@film.title %></h2>
+<%=image_tag @film.picture_url, :width => '210'%>
+<%unless @film.trailer_url.blank?%>
+	<iframe width="490" height="315" src="<%=@src%>" frameborder="0" allowfullscreen></iframe>
+<%end%>
+<p><%= @film.summary %><p>
+<p><%= link_to 'link to the movie' , 'ftp://kokoteur:vleurgat@172.16.1.100/' + @film.path_movie %> (use right click, save as)</p>

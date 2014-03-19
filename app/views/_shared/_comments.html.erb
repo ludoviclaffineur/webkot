@@ -1,0 +1,24 @@
+
+
+<h3>Comments</h3>
+<div id="comments">
+	<%@comments.each do |comment| %>
+  <div class="comments">
+		<li>
+		<strong><%= link_to comment.commenter.nickname, user_path(comment.commenter) %></strong> comments:
+    <%= simple_format comment.content %>
+  	</li>
+		<li></li>
+	</div>
+<% end %>
+</div>
+<% if user_signed_in?%>
+<%= form_for [@commentable, @comment] do |f| %>
+  <div id='comment'>
+		<%= f.text_area :content, :placeholder =>'Your comment', :rows => 4 %>
+		<div id='comment-button'>
+			<%= f.submit 'Comment this!' %>
+		</div>
+	</div>
+	<% end %>
+<% end %>

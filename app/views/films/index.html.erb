@@ -1,0 +1,57 @@
+<section id='films-index'>
+	<div class='action-call'>
+		<%= link_to content_tag(:span, 'Add a new movie'), new_film_path, :class => "button"%>
+	</div>
+	<div id='search-form'>
+		<%= form_tag("/search", :method => "GET") do %>
+	  	<%= text_field_tag(:title,nil, :placeholder => 'search') %>
+		<%end%>
+	</div>
+<% unless @order == 'alpha'%>
+<h2><%= link_to 'Recent movies', 'films?order=recent' %></h2>
+<TABLE>
+	<TR>
+		<% @films_recent.each_with_index do |film, index| %>
+		<TD>
+			<div style="width: 130px; height: 175px; overflow: hidden">
+			  <%= link_to(image_tag(film.picture_url , :height => '125'), film) %>
+			<p><%= link_to film.title, film %></p>
+			</div>
+
+		</TD>
+		<% if (index+1)%5 == 0 %>
+			</TR>
+			<TR>
+		<% end %>
+		<% end %>
+  </TR>
+</TABLE>
+<% end %>
+<% unless @order == 'recent'%>
+	<h2><%= link_to 'Movies available', 'films?order=alpha' %></h2>
+	<TABLE>
+		<TR>
+			<% @films.each_with_index do |film, index| %>
+				<TD>
+					<div style="width: 130px; height: 175px; overflow: hidden">
+			  		<%= link_to(image_tag(film.picture_url , :height => '125'), film) %>
+						<p><%= link_to film.title, film %></p>
+					</div>
+
+				</TD>
+					<% if (index+1)%5 == 0 %>
+				</TR>
+				<TR>
+					<% end %>
+			<% end %>
+  </TR>
+</TABLE>
+
+<% end %>
+<% unless @order.nil?%>
+	<% if @page>1 %>
+		<%= link_to 'previous page', 'films?order=' + @order + '&page=' + (@page-1).to_s%>
+	<%end%>
+	<%= link_to 'next page', 'films?order=' + @order + '&page=' + (@page+1).to_s %>
+<% end %>
+</section>

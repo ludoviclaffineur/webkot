@@ -1,0 +1,32 @@
+<%= form_for(@episode) do |f| %>
+	<ul class="fields">
+	<li class="string">
+		<%= f.label  :title,  'Insert the title' %>
+		<%= f.text_field :title %>
+	</li>
+	<li class="string">
+		<%= f.label :season_number,  'Seaons number' %>
+		<%= f.text_field :season_number %>
+	</li>
+	<li class="string">
+		<%= f.label  :episode_number, 'Episode number'%>
+		<%= f.text_field :episode_number %>
+	</li>
+	<li class="string">
+		<%= f.label  :aired, 'aired'%>
+		<%= f.datetime_select :aired %>
+	</li>
+	<li class="string">
+		<%= f.label  :path_tvshow, 'Path'%>
+		<%= f.text_field  :path_tvshow %>
+	</li>
+	<li class="string">
+		<%= f.label  :thumb_url, 'Thumb Url'%>
+		<%= f.text_field  :thumb_url %>
+	</li>
+
+
+	  <div class="form-actions clear">
+      <span class="button"><%= f.submit 'save' %></span>
+    </div>
+<% end %>

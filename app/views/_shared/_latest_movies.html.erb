@@ -1,0 +1,11 @@
+<section id="latest-comments-wrap">
+  <div id="latest-movie-box">
+    <h2>Latest movie</h2>
+		<TABLE>
+		  <TR>
+		 <TH> <%=link_to(image_tag(movie.picture_url, :width => '50'), movie) %></TH>
+		 <TD> <p><strong><%= link_to movie.title, movie %></strong><p> <p> <%=truncate(movie.summary, :length => 50) %></p></TD>
+		  </TR>
+		</TABLE>
+	</div>
+</section>

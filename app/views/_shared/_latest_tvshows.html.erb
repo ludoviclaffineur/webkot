@@ -1,0 +1,9 @@
+<section id="latest-comments-wrap">
+  <div id="latest-movie-box">
+    <h2>Latest TV Shows</h2>
+    	<% episodes.each do |episode|%>
+    		<p><%= link_to episode.serie.title + " " + episode.season_number.to_s + "x" + episode.episode_number.to_s , episode%> <small>added on <%= episode.created_at.to_formatted_s(:long)[0..-6] %></small></p>
+    	<%end%>
+		<p></p>
+	</div>
+</section>

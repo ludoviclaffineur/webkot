@@ -1,0 +1,17 @@
+<section id="edit-profile">
+	<%= form_for( @serie, :url => series_index_path) do |f| %>
+	  <ul class="fields">
+			<% @serie.errors.full_messages.each do |msg| %>
+				<p><b><%= msg %></b></p>
+			<% end %>
+	    <li class="string">
+	      <%= f.label :title %>
+	      <%= f.text_field :title %>
+	    </li>
+
+	  </ul>
+	  <div class="form-actions clear">
+	    <span class="button"><%= f.submit 'Create' %></span>
+	  </div>
+	<% end %>
+</section>

@@ -1,32 +1,30 @@
-
-
-<h1>Listing posts</h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Content</th>`
-		<th>Author</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @posts.each do |post| %>
-  <tr>
-    <td><%= post.title %></td>
-    <td><%= post.content %></td>
-		<td><%= post.author.email %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Post', new_post_path %>
-
-</div>
+<section id='posts'>
+	<% if user_signed_in? %>
+		<div class='action-call'>
+			<%= link_to content_tag(:span, 'Write a new post'), new_post_path, :class => "button"%>
+		</div>
+	<% end %>
+	<br/>
+		<%= image_tag "banniere.png", :width => '500'%>
+	<br/>
+	<ol>
+		<% @posts.each do |post| %>
+		<li>
+			<h3><%= link_to post.title, post %><small> by <%= link_to post.author.nickname, user_path(post.author) %></small> <h3>
+				<% if user_signed_in? %>
+				<div class='edit-delete'>
+					<small><%= link_to 'edit', edit_post_path(post) %></small> <small><%= link_to 'delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></small>
+				</div>
+				<% end %>
+			<div id='post-content'>
+				<%= simple_format(truncate(post.content, :length => 150)) %>
+			</div>
+		</li>
+		<% end %>
+	</ol>
 </section>
+<div id='right-menu'>
+	<%= render :partial => "_shared/latest_comments", :locals =>{:comments => @latest_comments} %>
+	<%= render :partial => "_shared/latest_movies", :locals =>{:movie => @latest_film} %>
+	<%= render :partial => "_shared/latest_tvshows", :locals =>{:episodes => @latest_episodes} %>
+</div>

@@ -1,0 +1,61 @@
+<h2><%= @episode.serie.title + " " + @episode.season_number.to_s + "x" + @episode.episode_number.to_s %> </h2>
+<div id="edit-button">
+	<%= link_to 'edit' , edit_episode_path(@episode)%> <%= link_to 'delete', @episode, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
+<%= image_tag @episode.thumb_url, :width => '300'%>
+<p>
+	Aired : <%= @episode.aired.to_formatted_s(:long)[0..-6] %>
+</p>
+<h3>Download links</h3>
+<p>
+	<a href="ftp://kokoteur:vleurgat@192.168.0.100/<%= @episode.path_tvshow %>">
+	<Link to the movie>
+	<%= @episode.season_number.to_s + "x" + @episode.episode_number.to_s + " " + (@episode.title.nil? ? "" : @episode.title ) %></a></br>
+
+	<% if @episode.has_subtitle? %>
+	Subtitle :
+	<a href="ftp://kokoteur:vleurgat@172.16.1.100/<%= @episode.subtitle %>;type=a">
+	
+	<Link to the movie>
+	<%= @episode.season_number.to_s + "x" + @episode.episode_number.to_s + " " + @episode.title %></a>
+	<% end %>
+	
+</p>
+
+<!-- this will install flowplayer inside previous A- tag. -->
+
+<!-- this A tag is where your Flowplayer will be placed. it can be anywhere -->
+
+<% if File.extname(@episode.path_tvshow) == '.mp4'%>
+<a
+href="ftp://kokoteur:vleurgat@192.168.0.100/<%= @episode.path_tvshow %>"
+style="display:block;width:520px;height:330px"
+id="player"> </a>
+
+<!-- this will install flowplayer inside previous A- tag. -->
+		<!--<script>
+			flowplayer("player", "<%=asset_path('flowplayer-3.2.14.swf')%>", {clip: {scaling: 'fit', captionUrl: 'ftp://kokoteur:vleurgat@192.168.0.100/Series/The Newsroom/season 1/The Newsroom 1x1 The Walking Shoe Incident.fr.srt', autoPlay: 'false', autoBuffering: "false"}, captions: {url: "http://releases.flowplayer.org/swf/flowplayer.captions-3.2.14.swf",captionTarget: 'content'},content: {
+            url: "http://releases.flowplayer.org/swf/flowplayer.content-3.2.8.swf",
+            bottom: 25,
+            height:40,
+            backgroundColor: 'transparent',
+            backgroundGradient: 'none',
+            border: 0,
+            textDecoration: 'outline',
+            style: {
+                body: {
+                    fontSize: 14,
+                    fontFamily: 'Arial',
+                    textAlign: 'center',
+                    color: '#ffffff'
+                }
+            }
+        }});
+		</script>-->
+		<script>
+			flowplayer("player", "<%=asset_path('flowplayer-3.2.14.swf')%>",
+					 {clip: {scaling: 'fit', autoPlay: false, autoBuffering: false}}); 
+          
+		</script>
+<% end %>
+<%= render :partial => "_shared/comments" %>

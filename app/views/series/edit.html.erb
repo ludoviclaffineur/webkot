@@ -1,0 +1,27 @@
+<section id="edit-profile">
+<%= form_for(@serie) do |f| %>
+  <ul class="picture">
+    <li>
+      <%= image_tag @serie.picture_url, :width => '725' %>
+      <%= f.text_field :picture_url %>
+    </li>
+  </ul>
+  <ul class="fields">
+		<% @serie.errors.full_messages.each do |msg| %>
+			<p><b><%= msg %></b></p>
+		<% end %>
+    <li class="string">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </li>
+    <li class="text">
+      <%= f.label :summary %>
+      <%= f.text_area :summary %>
+    </li>
+
+  </ul>
+  <div class="form-actions clear">
+    <span class="button"><%= f.submit 'Update' %></span>
+  </div>
+<% end %>
+</section>

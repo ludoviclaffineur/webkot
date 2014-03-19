@@ -1,0 +1,35 @@
+<section id="edit-profile">
+<%= form_for(@film) do |f| %>
+  <ul class="picture">
+    <li>
+      <%= image_tag @film.picture_url, :width => '210' %>
+      <%= f.text_field :picture_url %>
+    </li>
+  </ul>
+  <ul class="fields">
+		<% @film.errors.full_messages.each do |msg| %>
+			<p><b><%= msg %></b></p>
+		<% end %>
+    <li class="string">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </li>
+    <li class="text">
+      <%= f.label :summary %>
+      <%= f.text_area :summary %>
+    </li>
+ 		<li class="string">
+			<%= f.label  :trailer_url, 'Video id Youtube' %>
+	  	<%= f.text_field :trailer_url %>
+		</li>
+
+			<li class="string">
+			<%= f.label :path_movie %>
+	  <%= f.text_field :path_movie %>
+	</li>
+  </ul>
+  <div class="form-actions clear">
+    <span class="button"><%= f.submit 'Update your profile' %></span>
+  </div>
+<% end %>
+</section>

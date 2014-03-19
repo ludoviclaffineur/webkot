@@ -1,0 +1,25 @@
+<section id='films-index'>
+<h2>Movies available</h2>
+<TABLE>
+	<TR>
+		<% @films.each_with_index do |film, index| %>
+		<TD>
+			<div style="width: 130px; height: 175px; overflow: hidden">
+			  <%= image_tag film.picture_url , :height => '125' %>
+			<p><%= link_to film.title, film %></p>
+			</div>
+
+		</TD>
+		<% if (index+1)%5 == 0 %>
+			</TR>
+			<TR>
+		<% end %>
+		<% end %>
+  </TR>
+</TABLE>
+
+<% if @page>1 %>
+	<%= link_to 'previous page', films_path(@page-1)%>
+<%end%>
+<%= link_to 'next page', films_path(@page+1)%>
+</section>

@@ -7,6 +7,8 @@ gem 'rails', '3.2.6'
 
 gem 'sqlite3'
 gem 'devise'
+
+gem "httparty", "~> 0.7.8"
 gem "paperclip", "~> 3.0"
 
 # Gems used only for assets and not required
@@ -39,3 +41,7 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 gem  'activerecord-postgresql-adapter'
+gem 'ruby-tmdb'
+gem 'tvdb_party'
+
+gem 'youtube_search'

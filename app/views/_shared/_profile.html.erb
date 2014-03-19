@@ -1,26 +1,49 @@
 <section id="profile-wrap">
-  <div id="profile-box">
-    <h2><%= user.nickname %></h2>
-  </div>
-	 <div class="picture">
-      <%= image_tag user.avatar.url(:medium) %>
-    </div>
+	<div id="profile-box">
+		<h2><%= link_to user.nickname, user_path(user) %></h2>
+	</div>
+	<div class="picture">
+		<%= image_tag user.avatar.url(:medium) %>
+	</div>
 	<TABLE>
-	  <TR>
-	 <TH> Name</TH>
-	 <TD> <%= user.name %></TD>
-	  </TR>
-	  <TR>
-	 <TH> Kot</TH>
-	 <TD> <%= user.kot %></TD>
-	  </TR>
-	  <TR>
-	 <TH> Birthday</TH>
-	 <TD> <%= user.birthday %></TD>
-	  </TR>
-	  <TR>
-	 <TH> Studies</TH>
-	 <TD> <%= user.studies %></TD>
-	  </TR>
+		<TR>
+			<TH> Name</TH>
+			<TD> <%= user.name %></TD>
+		</TR>
+		<TR>
+			<TH> Kot</TH>
+			<TD> <%= user.kot %></TD>
+		</TR>
+		<TR>
+			<TH> Birthday</TH>
+			<TD> <%= user.birthday %></TD>
+		</TR>
+		<TR>
+			<TH> Studies</TH>
+			<TD> <%= user.studies %></TD>
+		</TR>
 	</TABLE>
+	<h2>People connected : </h2>
+	
+	<p>
+	<% User.all.sort_by {|name,last_action| last_action}.each do |u|%>
+	
+	<%unless u.last_action.nil? || (Time.now - u.last_action)/60 > 6%>
+		<strong><%= link_to u.nickname, user_path(u)  %>	 </strong>
+	<%end%>
+	
+	<%end%>
+	<p>
+		
+	<h2>Users on webkot : </h2>
+	
+	<p>
+	<% User.all.each do |u|%>
+		<%=  link_to( image_tag(u.avatar.url(:thumb)) , user_path(u)) %>
+
+	<%end%>
+		
+	
+	
+	<p>
 </section>

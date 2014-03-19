@@ -1,9 +1,33 @@
+@import url(http://fonts.googleapis.com/css?family=Boogaloo|Ubuntu:500italic);
+
+
 body {
   background: #dfdfdf url("bg.png") repeat-x center 50px;
   font-size: 0.7em;
   font-family: "Lucida Grande", arial, sans-serif;
 	margin:0 0 0 0;
 }
+
+a {
+	 color: #111111;
+}
+
+h2 {
+  a {
+    text-decoration: none;
+    color: #263c52;
+  }
+
+  small {
+    color: #aaa;
+			font-size: 0.6em;
+    a {
+      color: #aaa;
+      text-decoration: none;
+    }
+	}
+}
+
 
 #top-bar {
   background: #263c52 ;
@@ -43,7 +67,7 @@ body {
   -moz-box-shadow: 0 1px 2px #ccc;
   box-shadow: 0 1px 2px #ccc;
   color: #111111;
-  min-height: 436px;
+  min-height: 800px;
 }
 
 header .wrap {
@@ -53,7 +77,7 @@ header .wrap {
 
 header .logo {
   display: inline-block;
-  font-size: 3em;
+  font-size: 6em;
   color: #fff;
   text-shadow: 0 1px 2px rgba(0,0,0,.5);
   margin: 10px 10px 10px 0;
@@ -63,6 +87,7 @@ header .logo {
 
 header .logo a {
   text-decoration: none;
+  font-family: 'Boogaloo', cursive;
   color: #fff;
 }
 
@@ -70,13 +95,15 @@ header .logo em {
   position: absolute;
   font-size: 0.5em;
   right: 1.2px;
+    
   bottom: -4px;
 }
 
 header .tagline {
   display: inline-block;
   font-style: italic;
-  	font-size: 1.2em;
+font-family: 'Ubuntu', sans-serif;
+  	font-size: 1.4em;
   color: #fff;
 }
 
@@ -162,7 +189,9 @@ header #flash .notice {
   position: absolute;
 
   #profile-box {
-    h2 {
+    h2 a {
+			text-decoration: none;
+			color: #263c52;
       margin: 10px 0;
     }
 
@@ -172,17 +201,17 @@ header #flash .notice {
   }
 
   #profile-info ul {
-    margin: 10px 0 0 0;
+    margin: 0px 0 0 0;
     padding: 0;
 
     li {
       list-style: none;
-      margin: 0 0 10px;
+      margin: 0 0 0px;
 
       .label {
         font-weight: bold;
         display: inline-block;
-        width: 55px;
+        width: 50px;
 			}
 
 			strong a {
@@ -191,6 +220,78 @@ header #flash .notice {
     }
   }
 }
+
+#right-menu{
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	#latest-comments-wrap {
+	  width: 200px;
+
+
+
+	  #latest-comments-box {
+	    h2 {
+				text-decoration: none;
+				color: #263c52;
+	      margin: 10px 0;
+	    }
+			p {
+				padding: 3px 5px;
+				a {
+					color: #263c52;
+					font-weight:bold;
+				}
+			}
+
+
+	    strong p a {
+		    color: #1b8e8a;
+	    }
+	  }
+		#latest-movie-box{
+			h2 {
+				text-decoration: none;
+				color: #263c52;
+	      margin: 10px 0;
+	    }
+			p {
+				a {
+					color: #263c52;
+					font-weight:bold;
+				}
+			}
+
+
+	    strong p a {
+		    color: #1b8e8a;
+	    }
+		}
+
+	  #latest-comments ul {
+
+	    margin: 0px 0 0 0;
+	    padding: 0;
+
+	    li {
+	      list-style: none;
+	      margin: 0 0 0px;
+
+	      .label {
+	        font-weight: bold;
+	        display: inline-block;
+	        width: 50px;
+				}
+
+				strong a {
+					color: #1b8e8a;
+	      }
+	    }
+	  }
+	}
+
+}
+
 
 
 #stream {
@@ -235,6 +336,7 @@ header #flash .notice {
   -moz-border-radius: 3px;
   border-radius: 3px;
   margin: 0 5px 0 0;
+  width: 170px
 }
 
 th {
@@ -261,12 +363,13 @@ th {
         margin: 0 0 7px;
         color: #aaa;
       }
+
     }
   }
 
   form {
     #main-content {
-      margin: 0 0 0 220px;
+      margin: 0 0 0 1500px;
 
       h2 {
         margin: 0 0 20px;
@@ -281,6 +384,7 @@ th {
 }
 
 #content form .fields li {
+	 list-style: none;
   margin: 0 0 10px 0;
   height: 41px;
 }
@@ -290,6 +394,7 @@ th {
 }
 
 #content form .fields li.text {
+ list-style: none;
   height: auto;
 }
 
@@ -325,7 +430,7 @@ th {
   -moz-box-shadow: inset 0 1px 2px #b0b0b0;
   box-shadow: inset 0 1px 2px #b0b0b0;
   padding: 5px;
-  width: 190px;
+  width: 180px;
 }
 
 #content form .form-actions {
@@ -436,6 +541,14 @@ th {
   padding: 0;
 }
 
+#show-profile #profile-info #edit-button a {
+  position: absolute;
+	top : 0px;
+	right : 0px;
+	margin: 0;
+  padding: 0;
+}
+
 #show-profile #profile-info ul li {
   list-style: none;
   margin: 0 0 20px;
@@ -446,4 +559,199 @@ th {
   font-weight: bold;
   margin: 0 0 10px;
   color: #aaa;
+}
+
+
+#posts{
+
+
+	.action-call {
+	    text-align: center;
+
+	    .button {
+	      position: relative;
+	      display: inline-block;
+	      background: url("immo-search-bg.png") repeat-x center bottom;
+	      border: 1px solid #ddd;
+	      -moz-border-radius: 2px;
+	      border-radius: 2px;
+	      padding: 6px 30px;
+	      text-decoration: none;
+
+	      span {
+	        background: url("post.png") no-repeat center left;
+	        display: inline-block;
+	        line-height: 20px;
+	        padding: 0 0 0 20px;
+	        color: #87a0c5;
+	        font-weight: bold;
+	        text-decoration: none;
+	      }
+	    }
+	  }
+ ol {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      padding: 10px 0;
+      position: relative;
+      width: 500px;
+
+      .picture {
+        float: left;
+        margin: 0 10px 10px 0;
+
+        img {
+          border: 1px solid #dbdbdb;
+          width: 100px;
+          height: 50px;
+          vertical-align: middle;
+          padding: 3px;
+          -moz-box-shadow: 0 1px 1px #efefef;
+          box-shadow: 0 1px 1px #efefef;
+        }
+      }
+
+      h3 {
+        margin: 0 0 15px 0;
+        padding: 0;
+        color: #000000;
+ 				font-size: 1.4em;
+
+        a {
+          text-decoration: none;
+          color: #263c52;
+        }
+
+        small {
+          color: #aaa;
+						font-size: 0.6em;
+          a {
+            color: #aaa;
+            text-decoration: none;
+          }
+				}
+			}
+			#post-content{
+				p {
+					font-size: 0.7em;
+					font-weight:normal;
+				}
+
+			}
+			.edit-delete {
+        position: absolute;
+        top: 10px;
+        right: 0;
+        margin: 0;
+        padding: 0;
+      }
+
+		}
+		li + li {
+      border-top: 1px solid #A2A2A2;
+    }
+	}
+}
+
+#edit-button {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#films-index{
+	h2 {
+		color: #263c52;
+		a {
+			color: #263c52;
+			text-decoration: none;
+		}
+	}
+	td {
+		text-align: center;
+	}
+
+ .action-call {
+    text-align: center;
+
+    .button {
+      position: relative;
+      display: inline-block;
+      background: url("immo-search-bg.png") repeat-x center bottom;
+      border: 1px solid #ddd;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+      padding: 6px 30px;
+      text-decoration: none;
+
+      span {
+        background: url("movie.png") no-repeat center left;
+        display: inline-block;
+        line-height: 20px;
+        padding: 0 0 0 20px;
+        color: #87a0c5;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+  }
+	#search-form {
+		position:absolute;
+		top:5px;
+		right:0px;
+		input {
+		  padding: 5px;
+		  -moz-border-radius: 3px;
+		  border-radius: 3px;
+		  margin: 0 5px 0 0;
+		  width: 170px
+		}
+	}
+
+}
+
+#comment textarea {
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: inset 0 1px 2px #b0b0b0;
+  box-shadow: inset 0 1px 2px #b0b0b0;
+  border: none;
+  width: 480px;
+  padding: 5px;
+
+}
+
+#comment{
+	width:550px;
+	padding: 5px;
+	background: #d8e9f5;
+	text-align:center;
+}
+
+#comments{
+	width:550px;
+	padding: 5px;
+	background: #d8e9f5;
+}
+
+#comments li{
+	padding: 5px;
+	text-decoration:none;
+	list-style: none;
+}
+
+#comments li strong a{
+	color: #263c52;
+}
+
+#comments li p{
+	margin: 10px;
+}
+#comments li + li{
+	border-top: 1px solid #FFFFFF;
 }

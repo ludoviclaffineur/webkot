@@ -1,0 +1,36 @@
+<% if @filename.nil? %>
+<h2>Select your file in the download folder on the server </h2>
+<p>
+	<%= @episode.serie.title%>
+	If you want to upload a local movie, please upload it into the download folder on ServeurKot
+</p>
+<% Dir.foreach("/data/download/" + @path) do |x| %>
+<p>
+	<% if File.directory?('/data/download/'+ @path + x)%>
+	<%= image_tag('folder.png')%>	<%= link_to x, '?path=' + @path + x + '/&serieid=' + @episode.serie.id.to_s %>
+	<% else %>
+	<%= link_to x, '?path=' + @path + '/&filename=' + x + '&serieid=' + @episode.serie.id.to_s %>
+	<% end %>
+</p>
+<% end %>
+<% else %>
+<%= form_for(@episode) do |f| %>
+	<ul class="fields">
+	<li class="string">
+		<%= f.label :season_number,  'Seaons number' %>
+		<%= f.text_field :season_number %>
+	</li>
+	<li class="string">
+		<%= f.label  :episode_number, 'Episode number'%>
+		<%= f.text_field :episode_number %>
+	</li>
+	<%= f.hidden_field :path_tvshow, :value => (@path + @filename) %>
+	<%= f.hidden_field :serie_id, :value => (@episode.serie_id) %>
+	<%= @filename %>
+	<%= @path %>
+	  <div class="form-actions clear">
+      <span class="button"><%= f.submit 'save' %></span>
+    </div>
+<% end %>
+</ul>
+<% end %>
